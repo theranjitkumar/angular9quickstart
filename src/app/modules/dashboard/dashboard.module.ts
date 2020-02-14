@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 
@@ -11,6 +12,7 @@ import { AboutComponent } from './pages/about/about.component';
   declarations: [DashboardComponent, HomeComponent, AboutComponent],
   imports: [
     CommonModule,
+    RouterModule,
     DashboardRoutingModule
   ]
 })
