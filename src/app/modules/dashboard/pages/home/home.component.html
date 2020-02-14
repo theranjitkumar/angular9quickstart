@@ -1,1 +1,36 @@
-<p>home works!</p>
+<p> dashboard home!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th> Id </th>
+        <th> Name </th>
+        <th> Email </th>
+        <th colspan="3">
+          <p class="text-center">Action's</p>
+        </th>
+      </tr>
+    </thead>
+    <tbody *ngIf="!dataNotFound">
+      <tr *ngFor="let d of results">
+        <td> {{d.id}} </td>
+        <td> {{d.title}} </td>
+        <td> {{d.body}} </td>
+        <!-- <td>
+          <a href="javascript:void(0)" (click)="getDataById(d.id)"> show</a>
+        </td>
+        <td>
+          <a href="javascript:void(0)" (click)="update(d.id)"> update</a>
+        </td>
+        <td>
+          <a href="javascript:void(0)" (click)="deleteData(d.id)"> delete</a>
+        </td> -->
+      </tr>
+    </tbody>
+    <tbody *ngIf="dataNotFound">
+      <tr>
+        <div style="text-align:center;">
+          Data Not found...
+        </div>
+      </tr>
+    </tbody>
+  </table>
